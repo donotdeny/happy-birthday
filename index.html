@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+    />
+    <title>Happy Birthday</title>
+  </head>
+
+  <body>
+    <div class="card">
+      <img
+        src="bday.jpg"
+        alt="birthday"
+        class="birthday"
+      />
+      <div class="text">
+        <h1>Happy Birthday!</h1>
+        <p>
+          Chúc Cậu có một tương lại thật tươi sáng cùng với những điều tốt đẹp
+          sắp đến nhé! Sinh nhật vui vẻ!
+        </p>
+        <p class="muted">-----------------------</p>
+        <button onclick="PlayStop()" type="button" class="btn">
+          <span>Click me!</span>
+        </button>
+        <audio id="audioID" autoplay loop>
+          <source
+            src="music.mp3"
+            type="audio/mp3"
+          />
+        </audio>
+
+        <script>
+          var myaudio = document.getElementById("audioID");
+          function PlayStop() {
+            return myaudio.paused ? myaudio.play() : myaudio.pause();
+          }
+        </script>
+      </div>
+      <div class="space"></div>
+    </div>
+  </body>
+</html>
